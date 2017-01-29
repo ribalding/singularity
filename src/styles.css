@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+ /*You can add global styles to this file, and also import other style files */
 body {
   display: none;
 }
+
+ .container {
+   min-width: 1700px;
+ }
+
+ .indexTitle{
+   text-align: center;
+ }

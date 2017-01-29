@@ -1,24 +1,25 @@
 export class Listing {
-  private id: string;
-  private productTitle : string;
-  private productSubTitle : string;
-  private productType : string;
-  private productPrice : number;
-  private productDescription : string;
-  private productCondition : string;
-  private sku : string;
-  private location : string;
-  private sold : boolean;
+  public id: string;
+  public productTitle : string;
+  public productSubTitle : string;
+  public productType : string;
+  public productPrice : number;
+  public productDescription : string;
+  public productCondition : string;
+  public sku : string;
+  public location : string;
+  public sold : boolean;
 
-  constructor(id: string,
-              productTitle: string,
-              productSubTitle: string,
-              productType: string,
-              productPrice : number,
-              productDescription: string,
-              productCondition : string,
-              sku : string,
-              location : string){
+
+  constructor(id?: string,
+              productTitle?: string,
+              productSubTitle?: string,
+              productType?: string,
+              productPrice? : number,
+              productDescription?: string,
+              productCondition? : string,
+              sku? : string,
+              location? : string){
 
     this.id = id;
     this.productTitle = productTitle;
