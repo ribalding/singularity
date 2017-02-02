@@ -1,0 +1,15 @@
+.listing-display-li {
+  background-color: ghostwhite;
+  border: .2em solid #eaeaea;
+  min-height: 10em;
+  margin: .8em 0;
+  padding: 1em;
+}
+
+.listing-display-ul {
+  list-style: none;
+}
+
+.listing-title {
+  font-size: 2em;
+}

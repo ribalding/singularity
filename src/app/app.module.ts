@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GemsMineralsComponent } from './gems-minerals/gems-minerals.component';
 import { BooksComponent } from './books/books.component';
 import { ArtComponent } from './art/art.component';
+import { FullListingComponent } from './full-listing/full-listing.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     NavbarComponent,
     GemsMineralsComponent,
     BooksComponent,
-    ArtComponent
+    ArtComponent,
+    FullListingComponent
   ],
   imports: [
     BrowserModule,

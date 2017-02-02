@@ -10,7 +10,6 @@ export class Listing {
   public location : string;
   public sold : boolean;
 
-
   constructor(id?: string,
               productTitle?: string,
               productSubTitle?: string,

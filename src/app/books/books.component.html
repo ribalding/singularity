@@ -1,3 +1,6 @@
-<p>
-  books works!
-</p>
+<ul class="listing-display-ul">
+  <li class="listing-display-li" *ngFor="let currentListing of listings">
+    <h1 class="listing-title">{{currentListing.productTitle}}</h1>
+  </li>
+</ul>
+
