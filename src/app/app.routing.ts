@@ -9,13 +9,15 @@ import { AddNewListingComponent } from "./add-new-listing/add-new-listing.compon
 import {ArtComponent} from "./art/art.component";
 import {BooksComponent} from "./books/books.component";
 import {GemsMineralsComponent} from "./gems-minerals/gems-minerals.component";
+import {FullListingComponent} from "./full-listing/full-listing.component";
 
 
 const appRoutes: Routes = [
   { path: 'add-new-listing', component: AddNewListingComponent},
   { path: 'art', component: ArtComponent},
   { path: 'books', component: BooksComponent},
-  { path: 'gems-minerals', component: GemsMineralsComponent}
+  { path: 'gems-minerals', component: GemsMineralsComponent},
+  { path: 'books/:id', component: FullListingComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

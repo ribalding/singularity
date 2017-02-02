@@ -11,4 +11,12 @@ export class ListingService {
     return LISTINGS;
   }
 
+  getListingByID(listingId : string){
+    for (var i = 0; i <= LISTINGS.length - 1; i++) {
+      if (LISTINGS[i].id === listingId) {
+        return LISTINGS[i];
+      }
+    }
+  }
+
 }
