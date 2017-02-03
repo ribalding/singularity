@@ -8,6 +8,7 @@ export class Listing {
   public productCondition : string;
   public sku : string;
   public location : string;
+  public image1Path : string;
   public sold : boolean;
 
   constructor(id?: string,
@@ -18,7 +19,8 @@ export class Listing {
               productDescription?: string,
               productCondition? : string,
               sku? : string,
-              location? : string){
+              location? : string,
+              image_1_path? : string){
 
     this.id = id;
     this.productTitle = productTitle;
@@ -29,6 +31,7 @@ export class Listing {
     this.productCondition = productCondition;
     this.sku = sku;
     this.location = location;
+    this.image1Path = image_1_path;
     this.sold = false;
 
   }

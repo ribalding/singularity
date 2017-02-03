@@ -4,6 +4,7 @@
   min-height: 10em;
   margin: .8em 0;
   padding: 1em;
+  color: #1b6d85;
 }
 
 .listing-display-ul {
@@ -12,4 +13,8 @@
 
 .listing-title {
   font-size: 2em;
+}
+
+.image-thumbnail{
+  max-width: 100%;
 }

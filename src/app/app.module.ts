@@ -13,6 +13,7 @@ import { GemsMineralsComponent } from './gems-minerals/gems-minerals.component';
 import { BooksComponent } from './books/books.component';
 import { ArtComponent } from './art/art.component';
 import { FullListingComponent } from './full-listing/full-listing.component';
+import { EditListingComponent } from './edit-listing/edit-listing.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     GemsMineralsComponent,
     BooksComponent,
     ArtComponent,
-    FullListingComponent
+    FullListingComponent,
+    EditListingComponent
   ],
   imports: [
     BrowserModule,

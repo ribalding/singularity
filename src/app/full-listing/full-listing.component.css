@@ -1,0 +1,12 @@
+.main-image{
+  max-width: 80%;
+  margin: auto;
+}
+
+.listing-text-section {
+  margin: 10px;
+}
+
+.listing-title{
+  font-weight: bold;
+}

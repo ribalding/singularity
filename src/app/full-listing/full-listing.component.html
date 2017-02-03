@@ -1,3 +1,13 @@
-<div>
-  <h1>{{listingToDisplay.productTitle}}</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="listing-text-section">
+      <h1 class="listing-title">{{listingToDisplay.productTitle}}</h1>
+      <h2>{{listingToDisplay.productSubTitle}}</h2>
+      <h2>Price: {{listingToDisplay.productPrice}}</h2>
+      <p>{{listingToDisplay.productDescription}}</p>
+    </div>
+  </div>
+  <div class="col-sm-offset-1 col-sm-5">
+    <img class="main-image" src="../../assets/images/{{listingToDisplay.image1Path}}">
+  </div>
 </div>
