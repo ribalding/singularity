@@ -5,8 +5,7 @@
 import { Listing } from './listing.model';
 
 export const LISTINGS: Listing[] = [
-  new Listing("fakeID1",
-              "Large 6.31 Carat Bixbite 'Red Emerald' (Red Beryl) Crystal / Wah Wah Mountains, Utah",
+  new Listing("Large 6.31 Carat Bixbite 'Red Emerald' (Red Beryl) Crystal / Wah Wah Mountains, Utah",
               "fakeProductSubTitle1",
               "gems",
               6750.00,
@@ -16,8 +15,7 @@ export const LISTINGS: Listing[] = [
               "Box 2A",
               "sampleGem1.jpg"),
 
-  new Listing("fakeID2",
-              "Keats Petree [original watercolor painting], Foundry Crucible",
+  new Listing("Keats Petree [original watercolor painting], Foundry Crucible",
               "fakeProductSubTitle2",
               "art",
               395.00,
@@ -27,8 +25,7 @@ export const LISTINGS: Listing[] = [
               "Box 2B",
               "sampleArt1.jpg"),
 
-  new Listing("fakeID3",
-              "Johns Hopkins Vintage Lacrosse Trading Card - Murad 1909. PSA VG 3, 1 of 2 in Grade",
+  new Listing("Johns Hopkins Vintage Lacrosse Trading Card - Murad 1909. PSA VG 3, 1 of 2 in Grade",
               "fakeProductSubTitle3",
               "misc",
               150.00,
@@ -38,8 +35,7 @@ export const LISTINGS: Listing[] = [
               "Box 3C",
               "sampleMisc1.jpg"),
 
-  new Listing("fakeID4",
-              "H.P. Lovecraft - The Complete Cthulhu Mythos Tales - with Tipped-in Poster - B&N Decorative Leatherbound Edition with 2004 John Coulthart Poster, \"Cthulhu Rising\". First Edition Thus and First Printing, 2016",
+  new Listing("H.P. Lovecraft - The Complete Cthulhu Mythos Tales - with Tipped-in Poster - B&N Decorative Leatherbound Edition with 2004 John Coulthart Poster, \"Cthulhu Rising\". First Edition Thus and First Printing, 2016",
               "fakeProdcutSubTitle4",
               "books",
               125.00,

@@ -1,5 +1,5 @@
 .main-image{
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -9,4 +9,10 @@
 
 .listing-title{
   font-weight: bold;
+}
+
+img {
+  border-radius: 2px;
+  display: block;
+  margin: auto;
 }

@@ -1,17 +1,18 @@
+<h1>Books</h1>
+
 <ul class="listing-display-ul">
 
-   <li class="listing-display-li" *ngFor="let currentListing of listings">
+   <li class="listing-display-li" *ngFor="let currentListing of listings | async">
      <div class="row">
-       <div class="col-sm-9">
+       <div class="col-md-9">
         <h1 class="listing-title">{{currentListing.productTitle}}</h1>
         <a (click)="goToFullListing(currentListing)">View Full Listing</a>
        </div>
-       <div class="col-sm-3">
+       <div class="col-md-3">
          <img class="image-thumbnail" src="../../assets/images/{{currentListing.image1Path}}">
        </div>
      </div>
    </li>
 </ul>
 
-<a href="index.html">Back</a>
 

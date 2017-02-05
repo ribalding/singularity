@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Listing } from '../listing.model';
 import { ListingService } from '../listing.service';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-full-listing',
@@ -13,7 +14,7 @@ import { ListingService } from '../listing.service';
 export class FullListingComponent implements OnInit {
 
   listingId : string;
-  listingToDisplay : Listing;
+  listingToDisplay;
 
   constructor(private route: ActivatedRoute,
               private location: Location,

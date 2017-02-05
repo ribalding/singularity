@@ -1,27 +1,24 @@
-<form id="add-new-listing-form" (ngSubmit)="onNewListingSubmit($event)" #newListingForm="ngForm">
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
         <label for="productSKU">Product SKU</label>
-        <input type="text" class="form-control" id="productSKU" placeholder="Enter Product SKU"
-               required
-               [(ngModel)]="newListing.sku" name="sku">
+        <input #productSKU type="text" class="form-control" id="productSKU" placeholder="Enter Product SKU">
       </div>
       <div class="form-group">
         <label for="productTitle">Product Title</label>
-        <input type="text" class="form-control" id="productTitle" placeholder="Enter Product Title">
+        <input type="text" class="form-control" id="productTitle" placeholder="Enter Product Title" #productTitle>
       </div>
       <div class="form-group">
         <label for="productSubtitle">Product Subtitle</label>
-        <input type="text" class="form-control" id="productSubtitle" placeholder="Enter Product Subtitle">
+        <input type="text" class="form-control" id="productSubtitle" placeholder="Enter Product Subtitle" #productSubtitle>
       </div>
       <div class="form-group">
         <label for="productPrice">Product Price (USD)</label>
-        <input type="text" class="form-control" id="productPrice" placeholder="Enter Product Price">
+        <input type="text" class="form-control" id="productPrice" placeholder="Enter Product Price" #productPrice>
       </div>
       <div class="form-group">
         <label for="productType">Select Product Type</label>
-        <select multiple class="form-control" id="productType">
+        <select multiple class="form-control" id="productType" #productType>
           <option *ngFor="let type of listingTypes" [value]="type">{{type}}</option>
         </select>
       </div>
@@ -29,13 +26,28 @@
     <div class="col-sm-6">
       <div class="form-group">
         <label for="productDescription">Product Description</label>
-        <textarea class="form-control" id="productDescription" rows="8"></textarea>
+        <textarea class="form-control" id="productDescription" rows="8" #productDescription></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productCondition">Product Condition</label>
+        <input type="text" class="form-control" id="productCondition" placeholder="Enter Product Condition" #productCondition>
       </div>
       <div class="form-group">
         <label for="storageLocation">Storage Location</label>
-        <input type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location">
+        <input type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location" #storageLocation>
       </div>
-      <button type="submit" class="btn" id="newPostSubmitButton" [disabled]="!theForm.form.valid">Submit</button>
+      <div class="form-group">
+        <label for="image1Path">Image 1</label>
+        <input type="text" class="form-control" name="image1Path" id="image1Path" placeholder="Enter Image 1 File Name" #image1Path>
+      </div>
+      <button class="btn" id="newPostSubmitButton" (click)="onNewListingSubmit(productTitle,
+                                                                                productSubtitle,
+                                                                                productType,
+                                                                                productPrice,
+                                                                                productDescription,
+                                                                                productCondition,
+                                                                                productSKU,
+                                                                                storageLocation,
+                                                                                image1Path)">Submit</button>
     </div>
   </div>
-</form>

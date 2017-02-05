@@ -11,18 +11,17 @@ export class Listing {
   public image1Path : string;
   public sold : boolean;
 
-  constructor(id?: string,
-              productTitle?: string,
-              productSubTitle?: string,
-              productType?: string,
-              productPrice? : number,
-              productDescription?: string,
-              productCondition? : string,
-              sku? : string,
-              location? : string,
-              image_1_path? : string){
+  constructor(productTitle : string,
+              productSubTitle : string,
+              productType: string,
+              productPrice : number,
+              productDescription : string,
+              productCondition : string,
+              sku : string,
+              location : string,
+              image_1_path : string){
 
-    this.id = id;
+    this.id = "test";
     this.productTitle = productTitle;
     this.productSubTitle = productSubTitle;
     this.productType = productType;
@@ -59,7 +58,7 @@ export class Listing {
     return this.productSubTitle;
   }
 
-  public setP0roductSubTitle(value: string) {
+  public setProductSubTitle(value: string) {
     this.productSubTitle = value;
   }
 
@@ -113,5 +112,19 @@ export class Listing {
 
   public hasSold(): boolean {
     return this.sold;
+  }
+
+  public getFormattedPrice(): string {
+    var price = this.productPrice.toString();
+    price = "$" + price + ".00";
+    return price;
+  }
+
+  public getImage1Path() : string{
+    return this.image1Path;
+  }
+
+  public setImage1Path(value: string){
+    this.image1Path = value;
   }
 }
