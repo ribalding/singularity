@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-7">
+  <div class="col-sm-6">
     <div class="listing-text-section">
       <h1 class="listing-title">{{(listingToDisplay|async)?.productTitle}}</h1>
       <h2>{{(listingToDisplay| async)?.productSubTitle}}</h2>
@@ -7,7 +7,7 @@
       <p>{{(listingToDisplay| async)?.productDescription}}</p>
     </div>
   </div>
-  <div class="col-sm-offset-1 col-sm-4">
+  <div class="col-sm-6">
     <img class="main-image" src="../../assets/images/{{(listingToDisplay | async)?.image1Path}}">
   </div>
 </div>

@@ -1,10 +1,12 @@
 .title {
   font-size: 10em;
+  font-family: 'Playfair Display', serif;
 }
 
 .subtitle {
   margin-top: 1.2em;
   font-size: 5em;
+  font-family: 'Playfair Display', serif;
 }
 
 .container{
@@ -14,7 +16,8 @@
   padding-right: 50px;
   padding-bottom: 50px;
   min-height:100%;
-  width: 1800px;
+  width: 1900px;
+  font-family: 'Playfair Display', serif;
 }
 
 body, html {
@@ -28,4 +31,37 @@ body, html {
   height: 60px;
   background-color: #f5f5f5;
   padding: 15px;
+}
+
+#navbar {
+  background-color: #eaeaea;
+  margin-bottom: 3em;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+#navbar li {
+  font-size: 175%;
+  padding: 5px;
+  background-color: #eaeaea;
+  -o-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+#navbar li a{
+  -o-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+#navbar li:hover {
+  background-color: #1b6d85;
+  cursor: pointer;
+}
+#navbar li:hover a{
+  background-color: #1b6d85;
+  color: #eaeaea;
+  cursor: pointer;
 }

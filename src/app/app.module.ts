@@ -8,7 +8,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { AddNewListingComponent } from './add-new-listing/add-new-listing.component';
 import {routing} from "./app.routing";
-import { NavbarComponent } from './navbar/navbar.component';
 import { GemsMineralsComponent } from './gems-minerals/gems-minerals.component';
 import { BooksComponent } from './books/books.component';
 import { ArtComponent } from './art/art.component';
@@ -26,7 +25,6 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AddNewListingComponent,
-    NavbarComponent,
     GemsMineralsComponent,
     BooksComponent,
     ArtComponent,

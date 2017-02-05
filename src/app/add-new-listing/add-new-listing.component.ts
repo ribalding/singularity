@@ -26,8 +26,28 @@ export class AddNewListingComponent {
                      sku ,
                      location,
                      image_1_path){
-    var newListing : Listing = new Listing(productTitle.value, productSubTitle.value, productType.value, productPrice.value, productDescription.value, productCondition.value, sku.value, location.value,image_1_path.value);
 
-    this.listingService.addListing(newListing);
+    if(this.validatePrice(productPrice.value) ||
+        this.validateString(productTitle.value) ||
+        this.validateString(productType.value) ||
+        this.validateString(productDescription.value) ||
+        this.validateString(productCondition.value) ||
+        this.validateString(sku.value) ||
+        this.validateString(image_1_path.value)){
+
+      var newListing : Listing = new Listing(productTitle.value, productSubTitle.value, productType.value, productPrice.value, productDescription.value, productCondition.value, sku.value, location.value,image_1_path.value);
+      this.listingService.addListing(newListing);
+    } else {
+      alert("Some fields were not entered correctly");
+    }
+
+  }
+
+  validatePrice(price){
+      return typeof price === "number";
+  }
+
+  validateString(string){
+    return string !== "";
   }
 }

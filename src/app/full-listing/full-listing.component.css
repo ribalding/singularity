@@ -1,10 +1,13 @@
 .main-image{
-  max-width: 100%;
+  max-width: 80%;
   margin: auto;
+  border: 5px solid #eaeaea;
 }
 
 .listing-text-section {
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
 }
 
 .listing-title{

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 declare var $: any;
 
 @Component({
@@ -7,9 +8,22 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(){}
+  constructor(private router: Router){}
 
   ngOnInit(){
     $("body").fadeIn(1000);
   }
+
+  goToBooks(){
+    this.router.navigate(['books']);
+  }
+
+  goToGems(){
+    this.router.navigate(['gems-minerals']);
+  }
+
+  goToArt(){
+    this.router.navigate(['art']);
+  }
+
 }

@@ -8,6 +8,23 @@
     </div>
   </div>
   <hr>
+  <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#" class="navbar-link-light">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a (click)="goToBooks()">Books</a></li>
+      <li><a (click)="goToArt()">Art</a></li>
+      <li><a (click)="goToGems()">Gems + Minerals</a></li>
+      <li><a>Coins + Currency</a></li>
+      <li><a>Collectibles</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+      <li><a href="../navbar-static-top/">Static top</a></li>
+      <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+    </ul>
+  </div>
   <!--<site-navigation></site-navigation>-->
   <router-outlet></router-outlet>
 </div>

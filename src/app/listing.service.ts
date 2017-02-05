@@ -16,7 +16,6 @@ listings: FirebaseListObservable<any[]>;
   }
 
   addListing(newListing: Listing) {
-    alert(newListing.getProductTitle());
     this.listings.push(newListing);
   }
 
