@@ -16,6 +16,7 @@ import { EditListingComponent } from './edit-listing/edit-listing.component';
 import { EditListingFormComponent } from './edit-listing-form/edit-listing-form.component';
 import { IndexComponent } from './index-component/index-component.component';
 import { CoinsComponent } from './coins/coins.component';
+import { CollectiblesComponent } from './collectibles/collectibles.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     EditListingComponent,
     EditListingFormComponent,
     IndexComponent,
-    CoinsComponent
+    CoinsComponent,
+    CollectiblesComponent
   ],
   imports: [
     BrowserModule,

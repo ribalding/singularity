@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Listing } from './listing.model';
-import { LISTINGS } from  './most-listings';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Injectable()
@@ -11,6 +10,8 @@ export class ListingService {
   books : FirebaseListObservable<any[]>;
   coins : FirebaseListObservable<any[]>;
   art: FirebaseListObservable<any[]>;
+  collectibles : FirebaseListObservable<any[]>;
+  gems: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
     this.allListings = angularFire.database.list('listings');
@@ -34,6 +35,20 @@ export class ListingService {
           equalTo: "Art"
         }
     });
+
+    this.collectibles = angularFire.database.list('listings', {
+      query: {
+        orderByChild: 'productType',
+        equalTo: "Diverse Collectibles"
+      }
+    });
+
+    this.gems = angularFire.database.list('listings', {
+      query: {
+        orderByChild: 'productType',
+        equalTo: "Gems & Minerals"
+      }
+    });
   }
 
   getFirebaseListings(){
@@ -55,6 +70,18 @@ export class ListingService {
 
   getAllArt(){
     return this.art;
+  }
+
+  getAllCoins(){
+    return this.coins;
+  }
+
+  getAllCollectibles(){
+    return this.collectibles;
+  }
+
+  getAllGems(){
+    return this.gems;
   }
 
 }

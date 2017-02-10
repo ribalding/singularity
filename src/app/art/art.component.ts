@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListingService } from '../listing.service';
 import {Listing} from "../listing.model";
 import {Router} from "@angular/router";
-import {FirebaseListObservable, FirebaseObjectObservable, AngularFire} from "angularfire2";
+import {FirebaseListObservable} from "angularfire2";
 
 @Component({
   selector: 'app-art',

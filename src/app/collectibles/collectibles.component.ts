@@ -5,16 +5,17 @@ import {Router} from "@angular/router";
 import {FirebaseListObservable} from "angularfire2";
 
 @Component({
-  selector: 'app-coins',
-  templateUrl: './coins.component.html',
-  styleUrls: ['./coins.component.css'],
-  providers: [ListingService]
+  selector: 'app-collectibles',
+  templateUrl: './collectibles.component.html',
+  styleUrls: ['./collectibles.component.css'],
+  providers : [ListingService]
 })
-export class CoinsComponent implements OnInit {
-  coinListings: FirebaseListObservable<any[]>;
+export class CollectiblesComponent implements OnInit {
+
+  collectibleListings : FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private listingService: ListingService) {
-    this.coinListings = this.listingService.getAllCoins();
+    this.collectibleListings = this.listingService.getAllCollectibles();
   }
 
   ngOnInit() {

@@ -26,4 +26,12 @@ export class AppComponent implements OnInit {
     this.router.navigate(['art']);
   }
 
+  goToCoins(){
+    this.router.navigate(['coins']);
+  }
+
+  goToCollectibles(){
+    this.router.navigate(['collectibles']);
+  }
+
 }

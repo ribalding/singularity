@@ -12,6 +12,8 @@ import {GemsMineralsComponent} from "./gems-minerals/gems-minerals.component";
 import {FullListingComponent} from "./full-listing/full-listing.component";
 import {EditListingComponent} from "./edit-listing/edit-listing.component";
 import {IndexComponent} from "./index-component/index-component.component";
+import {CoinsComponent} from "./coins/coins.component";
+import {CollectiblesComponent} from "./collectibles/collectibles.component";
 
 
 const appRoutes: Routes = [
@@ -19,6 +21,8 @@ const appRoutes: Routes = [
   { path: 'add-new-listing', component: AddNewListingComponent},
   { path: 'art', component: ArtComponent},
   { path: 'books', component: BooksComponent},
+  { path: 'coins', component: CoinsComponent},
+  { path: 'collectibles', component: CollectiblesComponent},
   { path: 'gems-minerals', component: GemsMineralsComponent},
   { path: 'books/:id', component: FullListingComponent},
   { path: 'edit-listing/:id', component: EditListingComponent}
