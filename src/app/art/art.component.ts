@@ -21,4 +21,8 @@ export class ArtComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToFullListing(listing){
+    this.router.navigate(['art', listing.$key]);
+  }
+
 }

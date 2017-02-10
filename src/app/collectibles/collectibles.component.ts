@@ -21,4 +21,8 @@ export class CollectiblesComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToFullListing(listing){
+    this.router.navigate(['collectibles', listing.$key]);
+  }
+
 }

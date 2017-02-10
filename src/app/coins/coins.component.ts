@@ -20,4 +20,8 @@ export class CoinsComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToFullListing(listing){
+    this.router.navigate(['coins', listing.$key]);
+  }
+
 }

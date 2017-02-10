@@ -25,6 +25,10 @@ const appRoutes: Routes = [
   { path: 'collectibles', component: CollectiblesComponent},
   { path: 'gems-minerals', component: GemsMineralsComponent},
   { path: 'books/:id', component: FullListingComponent},
+  { path: 'art/:id', component: FullListingComponent},
+  { path: 'coins/:id', component: FullListingComponent},
+  { path: 'collectibles/:id', component: FullListingComponent},
+  { path: 'gems-minerals/:id', component: FullListingComponent},
   { path: 'edit-listing/:id', component: EditListingComponent}
 ];
 

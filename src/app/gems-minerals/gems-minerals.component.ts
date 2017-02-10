@@ -20,4 +20,8 @@ export class GemsMineralsComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToFullListing(listing){
+    this.router.navigate(['gems-minerals', listing.$key]);
+  }
+
 }
