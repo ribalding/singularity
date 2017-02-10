@@ -9,16 +9,25 @@ declare var $: any;
   styleUrls: ['./index-component.component.css']
 })
 export class IndexComponent implements OnInit {
-  newListings : Listing[];
+  newListings : Listing[] = [];
   listings : FirebaseListObservable<any[]>;
+
 
   constructor(angularFire : AngularFire) {
     this.listings = angularFire.database.list('listings', {});
     this.listings.subscribe(snapshots => {
       snapshots.forEach(snapshot => {
-        var newListing = new Listing();
-        newListing.setImage1Path(snapshot);
-        console.log(newListing);
+        var newListing : Listing = new Listing(snapshot.productTitle,
+                                                snapshot.productSubTitle,
+                                                snapshot.productType,
+                                                snapshot.productPrice,
+                                                snapshot.productDescription,
+                                                snapshot.productCondition,
+                                                snapshot.sku,
+                                                snapshot.location,
+                                                snapshot.image1Path);
+
+        this.newListings.push(newListing);
       });
     });
   }

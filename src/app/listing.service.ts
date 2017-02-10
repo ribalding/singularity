@@ -84,4 +84,9 @@ export class ListingService {
     return this.gems;
   }
 
+  updateListing(firebaseKey : string, newListing : Listing){
+    var currentListing = this.getListingByID(firebaseKey);
+    currentListing.update(newListing);
+  }
+
 }

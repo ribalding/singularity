@@ -3,42 +3,46 @@
     <div class="col-sm-6">
       <div class="form-group">
         <label for="productSKU">Product SKU</label>
-        <input [(ngModel)]="currentListing.sku" type="text" class="form-control" id="productSKU" placeholder="Enter Product SKU" required>
+        <input type="text" class="form-control" id="productSKU" placeholder="Enter Product SKU" required>
       </div>
       <div class="form-group">
         <label for="productTitle">Product Title</label>
-        <input [(ngModel)]="currentListing.productTitle"  type="text" class="form-control" id="productTitle" placeholder="Enter Product Title">
+        <input  type="text" class="form-control" id="productTitle" placeholder="Enter Product Title">
       </div>
       <div class="form-group">
         <label for="productSubtitle">Product Subtitle</label>
-        <input [(ngModel)]="updatedListing.productSubTitle" value="{{(currentListing | async)?.productSubTitle}}" type="text" class="form-control" id="productSubtitle" placeholder="Enter Product Subtitle">
+        <input type="text" class="form-control" id="productSubtitle" placeholder="Enter Product Subtitle">
       </div>
       <div class="form-group">
         <label for="productPrice">Product Price (USD)</label>
-        <input [(ngModel)]="updatedListing.productPrice" value="{{(currentListing | async)?.productPrice}}" type="text" class="form-control" id="productPrice" placeholder="Enter Product Price">
+        <input type="text" class="form-control" id="productPrice" placeholder="Enter Product Price">
       </div>
-      <div class="form-group">
+      <div class="form-group" id="typeSelect">
         <label for="productType">Select Product Type</label>
-        <select multiple class="form-control" id="productType">
-          <option *ngFor="let type of listingTypes" [value]="type">{{type}}</option>
+        <select class="form-control" id="productType">
+          <option value='Books & Ephemera'>Books & Ephemera</option>
+          <option value="Art">Art</option>
+          <option value="Coins & Currency">Coins & Currency</option>
+          <option value='Gems & Minerals'>Gems & Minerals</option>
+          <option value='Diverse Collectibles'>Diverse Collectibles</option>
         </select>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
         <label for="productDescription">Product Description</label>
-        <textarea [(ngModel)]="currentListing.productDescription" class="form-control" id="productDescription" rows="8"></textarea>
+        <textarea class="form-control" id="productDescription" rows="8"></textarea>
 
         <label for="productCondition">Product Condition</label>
-        <input [(ngModel)]="updatedListing.productCondition" value="{{(currentListing | async)?.productCondition}}" type="text" class="form-control" id="productCondition" placeholder="Enter Product Condition">
+        <input type="text" class="form-control" id="productCondition" placeholder="Enter Product Condition">
       </div>
       <div class="form-group">
         <label for="storageLocation">Storage Location</label>
-        <input [(ngModel)]="updatedListing.location" value="{{(currentListing | async)?.location}}" type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location">
+        <input type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location">
       </div>
       <div class="form-group">
         <label for="image1Path">Image 1</label>
-        <input [(ngModel)]="updatedListing.image1Path" value="{{(currentListing | async)?.image1Path}}" type="text" class="form-control" name="image1Path" id="image1Path" placeholder="Enter Image 1 File Name" #image1Path>
+        <input type="text" class="form-control" name="image1Path" id="image1Path" placeholder="Enter Image 1 File Name" #image1Path>
       </div>
       <button class="btn" id="newPostSubmitButton" (click)="onEditListingSubmit()">Submit</button>
     </div>
