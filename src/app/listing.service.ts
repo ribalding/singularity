@@ -5,23 +5,56 @@ import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'a
 
 @Injectable()
 export class ListingService {
-listings: FirebaseListObservable<any[]>;
+
+  selectedListing;
+  allListings: FirebaseListObservable<any[]>;
+  books : FirebaseListObservable<any[]>;
+  coins : FirebaseListObservable<any[]>;
+  art: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
-    this.listings = angularFire.database.list('listings');
+    this.allListings = angularFire.database.list('listings');
+    this.books = angularFire.database.list('listings', {
+      query: {
+        orderByChild: 'productType',
+        equalTo: "Books & Ephemera"
+      }
+    });
+
+    this.coins = angularFire.database.list('listings', {
+      query: {
+        orderByChild: 'productType',
+        equalTo: "Coins & Currency"
+      }
+    });
+
+    this.art = angularFire.database.list('listings', {
+        query: {
+          orderByChild: 'productType',
+          equalTo: "Art"
+        }
+    });
   }
 
   getFirebaseListings(){
-    return this.listings;
+    return this.allListings;
   }
 
   addListing(newListing: Listing) {
-    this.listings.push(newListing);
+    this.allListings.push(newListing);
   }
 
 
   getListingByID(listingId : string){
     return this.angularFire.database.object('listings/' + listingId);
+  }
+
+  getAllBooks(){
+    return this.books;
+  }
+
+  getAllArt(){
+    return this.art;
   }
 
 }

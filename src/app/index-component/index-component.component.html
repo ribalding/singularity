@@ -1,0 +1,7 @@
+<div id="photoblock">
+  <div id="slider" class="nivoSlider">
+    <div *ngFor="let currentListing of listings | async">
+      <img  src="../../assets/images/{{currentListing.image1Path}}" alt="Temple, Burning Man 2016" title="Temple under construction, Burning Man 2016">
+    </div>
+  </div>
+</div>

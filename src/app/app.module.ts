@@ -13,6 +13,9 @@ import { BooksComponent } from './books/books.component';
 import { ArtComponent } from './art/art.component';
 import { FullListingComponent } from './full-listing/full-listing.component';
 import { EditListingComponent } from './edit-listing/edit-listing.component';
+import { EditListingFormComponent } from './edit-listing-form/edit-listing-form.component';
+import { IndexComponent } from './index-component/index-component.component';
+import { CoinsComponent } from './coins/coins.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +32,10 @@ export const firebaseConfig = {
     BooksComponent,
     ArtComponent,
     FullListingComponent,
-    EditListingComponent
+    EditListingComponent,
+    EditListingFormComponent,
+    IndexComponent,
+    CoinsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListingService } from '../listing.service';
 import {Listing} from "../listing.model";
 import {Router} from "@angular/router";
-import {FirebaseListObservable} from "angularfire2";
+import {FirebaseListObservable, FirebaseObjectObservable} from "angularfire2";
 
 @Component({
   selector: 'app-books',
@@ -13,10 +13,11 @@ import {FirebaseListObservable} from "angularfire2";
 export class BooksComponent implements OnInit {
 
   listings : FirebaseListObservable<any[]>;
-  constructor(private router: Router, private listingService: ListingService) { }
+  constructor(private router: Router, private listingService: ListingService) {
+    this.listings = this.listingService.getAllBooks();
+  }
 
   ngOnInit() {
-    this.listings = this.listingService.getFirebaseListings();
   }
 
   goToFullListing(listing){

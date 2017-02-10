@@ -1,0 +1,14 @@
+.btn {
+  color: black;
+}
+
+
+.edit-listing input,
+.edit-listing textarea {
+  font-size: 170%;
+  padding: 20px;
+}
+
+.edit-listing label {
+ font-size : 170%;
+}

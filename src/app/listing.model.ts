@@ -11,15 +11,15 @@ export class Listing {
   public image1Path : string;
   public sold : boolean;
 
-  constructor(productTitle : string,
-              productSubTitle : string,
-              productType: string,
-              productPrice : number,
-              productDescription : string,
-              productCondition : string,
-              sku : string,
-              location : string,
-              image_1_path : string){
+  constructor(productTitle? : string,
+              productSubTitle? : string,
+              productType?: string,
+              productPrice? : number,
+              productDescription? : string,
+              productCondition? : string,
+              sku? : string,
+              location? : string,
+              image_1_path? : string){
 
     this.id = "test";
     this.productTitle = productTitle;
