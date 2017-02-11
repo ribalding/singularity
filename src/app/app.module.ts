@@ -8,15 +8,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { AddNewListingComponent } from './add-new-listing/add-new-listing.component';
 import {routing} from "./app.routing";
-import { GemsMineralsComponent } from './gems-minerals/gems-minerals.component';
-import { BooksComponent } from './books/books.component';
-import { ArtComponent } from './art/art.component';
 import { FullListingComponent } from './full-listing/full-listing.component';
 import { EditListingComponent } from './edit-listing/edit-listing.component';
 import { EditListingFormComponent } from './edit-listing-form/edit-listing-form.component';
 import { IndexComponent } from './index-component/index-component.component';
-import { CoinsComponent } from './coins/coins.component';
-import { CollectiblesComponent } from './collectibles/collectibles.component';
+import { ListingsComponent } from './listings/listings.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,15 +25,11 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AddNewListingComponent,
-    GemsMineralsComponent,
-    BooksComponent,
-    ArtComponent,
     FullListingComponent,
     EditListingComponent,
     EditListingFormComponent,
     IndexComponent,
-    CoinsComponent,
-    CollectiblesComponent
+    ListingsComponent
   ],
   imports: [
     BrowserModule,

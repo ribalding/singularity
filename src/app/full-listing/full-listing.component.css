@@ -1,7 +1,7 @@
 .main-image{
   max-width: 80%;
-  margin: auto;
-  border: 5px solid #eaeaea;
+  border: 3px solid #eaeaea;
+  max-height: 500px;
 }
 
 .listing-text-section {
@@ -16,6 +16,4 @@
 
 img {
   border-radius: 2px;
-  display: block;
-  margin: auto;
 }
