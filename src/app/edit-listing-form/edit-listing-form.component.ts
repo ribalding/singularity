@@ -50,7 +50,9 @@ export class EditListingFormComponent implements OnInit {
     this.listingService.updateListing(this.listingId, updatedListing);
   }
 
-
-  createListingObject(listing){
+  deleteListing(){
+    if(confirm('Are You Sure You Want To Delete This Post?')){
+      this.listingService.deleteListing(this.listingId);
+    }
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Listing } from '../listing.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { ListingService } from '../listing.service';
+import {Router} from "@angular/router";
 
 declare var $: any;
 
@@ -13,7 +14,7 @@ declare var $: any;
   providers: [ListingService]
 })
 export class AddNewListingComponent {
-  constructor(private listingService : ListingService) { }
+  constructor(private listingService : ListingService, private router : Router) { }
 
   listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Diverse Collectibles'];
 
@@ -37,6 +38,9 @@ export class AddNewListingComponent {
 
       var newListing : Listing = new Listing(productTitle.value, productSubTitle.value, productType.value, productPrice.value, productDescription.value, productCondition.value, sku.value, location.value,image_1_path.value);
       this.listingService.addListing(newListing);
+      alert("Listing Saved Successfully");
+      this.router.navigate([""]);
+
     } else {
       alert("Some fields were not entered correctly");
     }

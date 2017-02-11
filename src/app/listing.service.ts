@@ -89,4 +89,9 @@ export class ListingService {
     currentListing.update(newListing);
   }
 
+  deleteListing(firebaseKey : string){
+    var currentListing = this.getListingByID(firebaseKey);
+    currentListing.remove();
+  }
+
 }

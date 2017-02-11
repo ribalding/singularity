@@ -29,7 +29,7 @@ export class FullListingComponent implements OnInit {
   }
 
   goToEditListing(){
-    this.router.navigate(['edit-listing']);
+    this.router.navigate(['edit-listing', this.listingId]);
   }
 
 }

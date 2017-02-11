@@ -4,12 +4,12 @@
 
   <li class="listing-display-li" *ngFor="let currentListing of artListings | async">
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-2">
+        <img class="image-thumbnail" src="../../assets/images/{{currentListing.image1Path}}">
+      </div>
+      <div class="col-md-6">
         <h1 class="listing-title">{{currentListing.productTitle}}</h1>
         <a (click)="goToFullListing(currentListing)">View Full Listing</a>
-      </div>
-      <div class="col-md-3">
-        <img class="image-thumbnail" src="../../assets/images/{{currentListing.image1Path}}">
       </div>
     </div>
   </li>
