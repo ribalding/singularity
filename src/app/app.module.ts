@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { masterFirebaseConfig } from '../api-keys';
 import { AngularFireModule } from 'angularfire2';
 
@@ -13,6 +13,7 @@ import { EditListingComponent } from './edit-listing/edit-listing.component';
 import { EditListingFormComponent } from './edit-listing-form/edit-listing-form.component';
 import { IndexComponent } from './index-component/index-component.component';
 import { ListingsComponent } from './listings/listings.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,6 +37,7 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
+    JsonpModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],

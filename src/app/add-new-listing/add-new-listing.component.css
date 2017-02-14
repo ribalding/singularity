@@ -1,0 +1,21 @@
+.submitButtonWrapper {
+  float: right;
+}
+
+.submitButtonWrapper button {
+  background-color: green;
+}
+
+#addNewImageField,
+#removeNewImageField{
+  background-color: darkkhaki;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 200%;
+}
+
+#removeNewImageField {
+  display: none;
+}
+
+

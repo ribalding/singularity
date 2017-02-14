@@ -1,9 +1,9 @@
 .listing-display-li {
   background-color: ghostwhite;
   border: .2em solid #eaeaea;
-  min-height: 5em;
+  min-height: 10em;
   margin: .8em 0;
-  padding: .5em;
+  padding: 1em;
   color: #1b6d85;
   font-size: 150%;
 }
@@ -13,9 +13,10 @@
 }
 
 .listing-title {
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .image-thumbnail{
   max-width: 100%;
+  box-shadow : -10px 10px 7px #343434;
 }

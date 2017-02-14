@@ -22,6 +22,20 @@
           <option *ngFor="let type of listingTypes" [value]="type">{{type}}</option>
         </select>
       </div>
+      <div class="row">
+        <div class="col-sm-6" id="imageFieldsWrapper">
+          <div class="form-group">
+            <label for="image1Path">Image 1</label>
+            <select class="form-control" name="image1Path" id="image1Path" size="1" #image1Path>
+              <option *ngFor="let file of fileNames" [value]="file">{{file}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="imageFieldButtonsWrapper">
+        <button class="btn" id="addNewImageField" (click)="addExtraImageFields()">+</button>
+        <button class="btn" id="removeNewImageField" (click)="removeExtraImageField()">-</button>
+      </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
@@ -36,11 +50,9 @@
         <label for="storageLocation">Storage Location</label>
         <input type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location" #storageLocation>
       </div>
-      <div class="form-group">
-        <label for="image1Path">Image 1</label>
-        <input type="text" class="form-control" name="image1Path" id="image1Path" placeholder="Enter Image 1 File Name" #image1Path>
-      </div>
-      <button class="btn" id="newPostSubmitButton" (click)="onNewListingSubmit(productTitle,
+
+      <div class="submitButtonWrapper">
+        <button class="btn" id="newPostSubmitButton" (click)="onNewListingSubmit(productTitle,
                                                                                 productSubtitle,
                                                                                 productType,
                                                                                 productPrice,
@@ -49,5 +61,6 @@
                                                                                 productSKU,
                                                                                 storageLocation,
                                                                                 image1Path)">Submit</button>
+      </div>
     </div>
   </div>

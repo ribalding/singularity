@@ -20,6 +20,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
 }
 .nivo-lightbox-overlay.nivo-lightbox-open {
 	visibility: visible;

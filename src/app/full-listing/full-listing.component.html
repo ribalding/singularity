@@ -1,5 +1,14 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.lightbox').nivoLightbox();
+  });
+</script>
 <div class="row">
-  <div class="col-sm-6">
+
+  <div class="col-sm-3">
+    <img class="main-image" src="../../assets/images/{{(listingToDisplay | async)?.image1Path}}">
+  </div>
+  <div class="col-sm-9">
     <div class="listing-text-section">
       <h1 class="listing-title">{{(listingToDisplay|async)?.productTitle}}</h1>
       <h2>{{(listingToDisplay| async)?.productSubTitle}}</h2>
@@ -7,8 +16,14 @@
       <p>{{(listingToDisplay| async)?.productDescription}}</p>
     </div>
   </div>
-  <div class="col-sm-8">
-    <img class="main-image" src="../../assets/images/{{(listingToDisplay | async)?.image1Path}}">
+</div>
+
+<h2>Click on an thumbnail to view full size</h2>
+<div class="row" id="image-row">
+  <div class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image1Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image1Path}}">
+    </a>
   </div>
 </div>
 <div class="row">

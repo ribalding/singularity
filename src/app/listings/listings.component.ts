@@ -3,6 +3,7 @@ import {ListingService} from "../listing.service";
 import {Router} from "@angular/router";
 import {FirebaseListObservable} from "angularfire2";
 
+
 @Component({
   selector: 'app-listings',
   templateUrl: './listings.component.html',
@@ -42,5 +43,6 @@ export class ListingsComponent implements OnInit {
   goToFullListing(listing){
     this.router.navigate([this.router.url, listing.$key]);
   }
+
 
 }

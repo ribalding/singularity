@@ -1,5 +1,4 @@
 export class Listing {
-  public id: string;
   public productTitle : string;
   public productSubTitle : string;
   public productType : string;
@@ -9,6 +8,11 @@ export class Listing {
   public sku : string;
   public location : string;
   public image1Path : string;
+  public image2Path : string;
+  public image3Path : string;
+  public image4Path : string;
+  public image5Path : string;
+  public image6Path : string;
   public sold : boolean;
 
   constructor(productTitle? : string,
@@ -21,7 +25,6 @@ export class Listing {
               location? : string,
               image_1_path? : string){
 
-    this.id = "test";
     this.productTitle = productTitle;
     this.productSubTitle = productSubTitle;
     this.productType = productType;
@@ -43,15 +46,6 @@ export class Listing {
 
   public setProductTitle(value: string) {
     this.productTitle = value;
-  }
-
-
-  public getID(): string {
-    return this.id;
-  }
-
-  public setID(value: string) {
-    this.id = value;
   }
 
   public getProductSubTitle(): string {
@@ -126,5 +120,45 @@ export class Listing {
 
   public setImage1Path(value: string){
     this.image1Path = value;
+  }
+
+  public getImage2Path() : string{
+    return this.image2Path;
+  }
+
+  public setImage2Path(value: string){
+    this.image2Path = value;
+  }
+
+  public getImage3Path() : string{
+    return this.image3Path;
+  }
+
+  public setImage3Path(value: string){
+    this.image3Path = value;
+  }
+
+  public getImage4Path() : string{
+    return this.image4Path;
+  }
+
+  public setImage4Path(value: string){
+    this.image4Path = value;
+  }
+
+  public getImage5Path() : string{
+    return this.image5Path;
+  }
+
+  public setImage5Path(value: string){
+    this.image5Path = value;
+  }
+
+  public getImage6Path() : string{
+    return this.image6Path;
+  }
+
+  public setImage6Path(value: string){
+    this.image6Path = value;
   }
 }

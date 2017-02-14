@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from "angularfire2";
 import {Listing} from "../listing.model";
 declare var $: any;
+declare var m : any;
 
 @Component({
   selector: 'app-index-component',
@@ -44,6 +45,13 @@ export class IndexComponent implements OnInit {
         keyboardNav:false,
         pauseOnHover:false
       });
+    });
+
+    m.attach({
+      thumb: '#thumb',
+      large: '../../assets/images/sampleArt1.jpg',
+      largeWrapper: 'preview',
+      zoom: 3
     });
   }
 
