@@ -21,12 +21,25 @@ declare var $: any;
 export class AddNewListingComponent {
   constructor(private listingService : ListingService,
               private router : Router,
-              private http: Http) {
+              private http: Http,
+              private af : AngularFire) {
+
+      this.af.auth.subscribe(user => {
+        if(user) {
+          console.log("THE BEST");
+          this.user = user;
+        }
+        else {
+          console.log("VICTORY");
+          this.user = {};
+        }
+      });
     this.getImageFileNames().subscribe( files => {
       this.fileNames=files;
     });
   }
 
+  user;
   fileNames = [];
   listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Diverse Collectibles'];
   imageCounter : number = 2;
@@ -59,22 +72,32 @@ export class AddNewListingComponent {
 
       if ($("#image2PathDiv").length){
         newListing.setImage2Path($("#image2Path").val());
+      } else {
+        newListing.setImage4Path("");
       }
 
       if ($("#image3PathDiv").length){
         newListing.setImage3Path($("#image3Path").val());
+      } else {
+        newListing.setImage3Path("");
       }
 
       if ($("#image4PathDiv").length){
         newListing.setImage4Path($("#image4Path").val());
+      } else {
+        newListing.setImage4Path("");
       }
 
       if ($("#image5PathDiv").length){
         newListing.setImage5Path($("#image5Path").val());
+      } else {
+        newListing.setImage5Path("");
       }
 
       if ($("#image6PathDiv").length){
         newListing.setImage6Path($("#image6Path").val());
+      } else {
+        newListing.setImage6Path("");
       }
 
       this.listingService.addListing(newListing);

@@ -7,3 +7,20 @@
   background-color: green;
   font-size: 200%;
 }
+
+.submitButtonWrapper {
+  float: right;
+}
+
+#addNewImageField,
+#removeNewImageField{
+  background-color: darkkhaki;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 200%;
+}
+
+#removeNewImageField {
+  display: none;
+}
+

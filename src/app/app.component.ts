@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {AngularFire} from "angularfire2";
 declare var $: any;
 
 @Component({
@@ -8,7 +9,9 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router){}
+  constructor(private router: Router,
+              private af: AngularFire){}
+
 
   ngOnInit(){
     $("body").fadeIn(1000);
@@ -34,4 +37,7 @@ export class AppComponent implements OnInit {
     this.router.navigate(['collectibles']);
   }
 
+  adminLogout() {
+    this.af.auth.logout();
+  }
 }
