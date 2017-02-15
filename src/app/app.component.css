@@ -40,6 +40,10 @@ body, html {
   font-family: 'Playfair Display', serif;
 }
 
+#navbar ul {
+  border-radius: 5px;
+}
+
 
 #navbar li {
   font-size: 175%;

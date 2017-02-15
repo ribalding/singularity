@@ -11,6 +11,7 @@ import {EditListingComponent} from "./edit-listing/edit-listing.component";
 import {IndexComponent} from "./index-component/index-component.component";
 import {ListingsComponent} from "./listings/listings.component";
 import {AdminLoginComponent} from "./admin-login/admin-login.component";
+import {ImageGalleryComponent} from "./image-gallery/image-gallery.component";
 
 
 const appRoutes: Routes = [
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
   { path: 'gems-minerals/:id', component: FullListingComponent},
   { path: 'edit-listing/:id', component: EditListingComponent},
   { path: 'listings', component: ListingsComponent},
-  { path: 'admin-login', component: AdminLoginComponent}
+  { path: 'admin-login', component: AdminLoginComponent},
+  { path: 'image-gallery', component: ImageGalleryComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

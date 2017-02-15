@@ -14,6 +14,7 @@ import { EditListingFormComponent } from './edit-listing-form/edit-listing-form.
 import { IndexComponent } from './index-component/index-component.component';
 import { ListingsComponent } from './listings/listings.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 
 
 export const firebaseConfig = {
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     EditListingFormComponent,
     IndexComponent,
     ListingsComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    ImageGalleryComponent
   ],
   imports: [
     BrowserModule,
