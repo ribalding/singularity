@@ -12,6 +12,7 @@ export class ListingService {
   art: FirebaseListObservable<any[]>;
   collectibles : FirebaseListObservable<any[]>;
   gems: FirebaseListObservable<any[]>;
+  sports : FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
     this.allListings = angularFire.database.list('listings');
@@ -49,6 +50,13 @@ export class ListingService {
         equalTo: "Gems & Minerals"
       }
     });
+
+    this.sports = angularFire.database.list('listings', {
+      query: {
+        orderByChild: 'productType',
+        equalTo: "Sports"
+      }
+    });
   }
 
   getFirebaseListings(){
@@ -82,6 +90,10 @@ export class ListingService {
 
   getAllGems(){
     return this.gems;
+  }
+
+  getAllSports(){
+    return this.sports;
   }
 
   updateListing(firebaseKey : string, newListing : Listing){

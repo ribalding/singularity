@@ -25,8 +25,33 @@
       <img src="../../assets/images/{{(listingToDisplay | async)?.image1Path}}">
     </a>
   </div>
+  <div *ngIf="image2Exists" class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image2Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image2Path}}">
+    </a>
+  </div>
+  <div *ngIf="image3Exists" class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image3Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image3Path}}">
+    </a>
+  </div>
+  <div *ngIf="image4Exists" class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image4Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image4Path}}">
+    </a>
+  </div>
+  <div *ngIf="image5Exists" class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image5Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image5Path}}">
+    </a>
+  </div>
+  <div *ngIf="image6Exists" class="col-sm-2">
+    <a class="lightbox" href="../../assets/images/{{(listingToDisplay | async)?.image6Path}}" title="testing">
+      <img src="../../assets/images/{{(listingToDisplay | async)?.image6Path}}">
+    </a>
+  </div>
 </div>
-<div class="row">
+<div *ngIf="userIsLoggedIn()" class="row">
   <div class="col-sm-4">
     <button class="btn" (click)="goToEditListing()">Edit Listing</button>
   </div>

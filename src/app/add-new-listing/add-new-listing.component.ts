@@ -38,7 +38,7 @@ export class AddNewListingComponent {
 
   user;
   fileNames = [];
-  listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Diverse Collectibles'];
+  listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Sports' ,'Diverse Collectibles'];
   imageCounter : number = 2;
 
 

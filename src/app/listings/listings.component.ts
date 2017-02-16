@@ -12,6 +12,7 @@ import {FirebaseListObservable} from "angularfire2";
 })
 export class ListingsComponent implements OnInit {
   listings : FirebaseListObservable<any>;
+  hasNoListings;
   title : string;
 
   constructor(private router : Router, private listingService : ListingService) {
@@ -37,12 +38,21 @@ export class ListingsComponent implements OnInit {
     } else if (this.router.url === "/collectibles"){
       this.listings=this.listingService.getAllCollectibles();
       this.title="Collectibles";
+    } else if(this.router.url === "/sports"){
+      this.listings=this.listingService.getAllSports();
+      this.title="Sports";
     }
+
+    this.listings.subscribe(listings => {
+      this.hasNoListings = this.noListings(listings);
+    })
   }
 
   goToFullListing(listing){
     this.router.navigate([this.router.url, listing.$key]);
   }
 
-
+  noListings(listings){
+    return listings.length == 0;
+  }
 }

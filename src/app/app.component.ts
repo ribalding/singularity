@@ -64,4 +64,8 @@ export class AppComponent implements OnInit {
   goToImageGallery(){
     this.router.navigate(['image-gallery']);
   }
+
+  goToSports(){
+    this.router.navigate(['sports']);
+  }
 }

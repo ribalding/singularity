@@ -40,6 +40,12 @@ var ListingService = (function () {
                 equalTo: "Gems & Minerals"
             }
         });
+        this.sports = angularFire.database.list('listings', {
+            query: {
+                orderByChild: 'productType',
+                equalTo: "Sports"
+            }
+        });
     }
     ListingService.prototype.getFirebaseListings = function () {
         return this.allListings;
@@ -64,6 +70,9 @@ var ListingService = (function () {
     };
     ListingService.prototype.getAllGems = function () {
         return this.gems;
+    };
+    ListingService.prototype.getAllSports = function () {
+        return this.sports;
     };
     ListingService.prototype.updateListing = function (firebaseKey, newListing) {
         var currentListing = this.getListingByID(firebaseKey);
