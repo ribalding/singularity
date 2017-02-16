@@ -26,11 +26,9 @@ export class AddNewListingComponent {
 
       this.af.auth.subscribe(user => {
         if(user) {
-          console.log("THE BEST");
           this.user = user;
         }
         else {
-          console.log("VICTORY");
           this.user = {};
         }
       });
