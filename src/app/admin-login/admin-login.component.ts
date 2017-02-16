@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFire, AuthProviders, AuthMethods} from "angularfire2";
+import {Router} from "@angular/router";
 declare var $: any;
 
 @Component({
@@ -9,11 +10,10 @@ declare var $: any;
 })
 export class AdminLoginComponent implements OnInit {
 
-  constructor(af : AngularFire) {
-    this.af = af;
+  constructor(private af : AngularFire,
+              private router : Router) {
   }
 
-  af : AngularFire;
 
   ngOnInit() {
   }
@@ -27,7 +27,7 @@ export class AdminLoginComponent implements OnInit {
     },{
       provider: AuthProviders.Password,
       method: AuthMethods.Password
-    }).then(function(user){
+    }).then(user => {
       this.router.navigate([""]);
     });
   }

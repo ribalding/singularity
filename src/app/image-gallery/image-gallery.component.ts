@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ImageGalleryService} from "../image-gallery.service";
+import {AngularFire} from "angularfire2";
+import {Router} from "@angular/router";
 declare var $: any;
 
 @Component({
@@ -10,14 +12,25 @@ declare var $: any;
 })
 export class ImageGalleryComponent implements OnInit {
 
-  constructor(private imageGalleryService : ImageGalleryService) {
+  constructor(private imageGalleryService : ImageGalleryService,
+              private af : AngularFire,
+              private router : Router) {
     this.imageGalleryService.getImageFileNames().subscribe(files => {
       this.imageList = files;
       this.generateImageGallery();
       $('.lightbox').nivoLightbox();
     });
+
+    this.af.auth.subscribe(user => {
+      if(user) {
+        this.user = user;
+      } else {
+        this.router.navigate([""]);
+      }
+    });
   }
 
+  user;
   imageList = [];
 
   ngOnInit() {

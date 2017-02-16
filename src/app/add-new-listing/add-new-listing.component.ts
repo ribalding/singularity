@@ -27,9 +27,8 @@ export class AddNewListingComponent {
       this.af.auth.subscribe(user => {
         if(user) {
           this.user = user;
-        }
-        else {
-          this.user = {};
+        } else {
+          this.router.navigate(['']);
         }
       });
     this.getImageFileNames().subscribe( files => {
@@ -159,5 +158,8 @@ export class AddNewListingComponent {
     return html;
   }
 
+  userIsLoggedIn(){
+    return this.user != null;
+  }
 
 }

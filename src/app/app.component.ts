@@ -10,8 +10,20 @@ declare var $: any;
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router,
-              private af: AngularFire){}
+              private af: AngularFire){
+    this.af.auth.subscribe(user => {
+      if(user) {
+        // user logged in
+        this.user = user;
+      }
+      else {
+        // user not logged in
+        this.user = null;
+      }
+    });
+  }
 
+  user;
 
   ngOnInit(){
     $("body").fadeIn(1000);
@@ -39,5 +51,17 @@ export class AppComponent implements OnInit {
 
   adminLogout() {
     this.af.auth.logout();
+  }
+
+  userIsLoggedIn(){
+    return this.user != null;
+  }
+
+  goToAddNewListing(){
+    this.router.navigate(['add-new-listing']);
+  }
+
+  goToImageGallery(){
+    this.router.navigate(['image-gallery']);
   }
 }
