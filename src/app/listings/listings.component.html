@@ -1,20 +1,26 @@
-<h1>{{title}}</h1>
 
-<ul class="listing-display-ul">
 
-  <li class="listing-display-li" *ngFor="let currentListing of listings | async">
-    <div class="row">
-      <div class="col-md-2">
-        <img class="image-thumbnail" src="../../assets/images/{{currentListing.image1Path}}">
-      </div>
-      <div class="col-md-8">
-        <h1 class="listing-title">{{currentListing.productTitle}}</h1>
-        <a (click)="goToFullListing(currentListing)">View Full Listing</a>
-      </div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-9">
+    <h1 class="title">{{title}}</h1>
+    <ul class="listing-display-ul">
+
+      <li class="listing-display-li effect6" *ngFor="let currentListing of listings | async">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="image-thumbnail" src="../../assets/images/{{currentListing.image1Path}}">
+          </div>
+          <div class="col-md-8 listing-title">
+              <h1>{{currentListing.productTitle}}</h1>
+              <a (click)="goToFullListing(currentListing)">View Full Listing</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div *ngIf="hasNoListings">
+      <h3>No {{title}} Listings Available Currently.  Check back Later!</h3>
     </div>
-  </li>
-</ul>
-
-<div *ngIf="hasNoListings">
-  <h3>No {{title}} Listings Available Currently.  Check back Later!</h3>
+  </div>
 </div>
+

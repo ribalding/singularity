@@ -7,13 +7,14 @@ import {Router, ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs";
 import {Response, Http} from "@angular/http";
 import DataSnapshot = firebase.database.DataSnapshot;
+import {ImageGalleryService} from "../image-gallery.service";
 declare var $: any;
 
 @Component({
   selector: 'app-edit-listing-form',
   templateUrl: './edit-listing-form.component.html',
   styleUrls: ['./edit-listing-form.component.css'],
-  providers: [ListingService]
+  providers: [ListingService, ImageGalleryService]
 })
 export class EditListingFormComponent implements OnInit {
   @Input() currentListing;
@@ -22,11 +23,11 @@ export class EditListingFormComponent implements OnInit {
   fileNames = [];
 
   constructor(private listingService: ListingService,
+              private imageGalleryService : ImageGalleryService,
               private router: Router,
-              private route: ActivatedRoute,
-              private http: Http) {
-    this.getImageFileNames().subscribe( files => {
-      this.fileNames=files;
+              private route: ActivatedRoute) {
+    this.imageGalleryService.getImageFileNames().subscribe(fileNames => {
+      this.fileNames = fileNames;
     });
   }
 
@@ -68,15 +69,6 @@ export class EditListingFormComponent implements OnInit {
     if(confirm('Are You Sure You Want To Delete This Post?')){
       this.listingService.deleteListing(this.listingId);
     }
-  }
-
-  getImageFileNames() : Observable<any> {
-    return this.http.get("assets/images")
-      .map(this.parseFileNames);
-  }
-
-  parseFileNames(res: Response){
-    return res.json();
   }
 
   createInitialImageFields(imageCounter : number, snapshot){

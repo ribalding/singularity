@@ -15,6 +15,7 @@ import { IndexComponent } from './index-component/index-component.component';
 import { ListingsComponent } from './listings/listings.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const firebaseConfig = {
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     IndexComponent,
     ListingsComponent,
     AdminLoginComponent,
-    ImageGalleryComponent
+    ImageGalleryComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import {Http, Response} from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import {ImageGalleryService} from "../image-gallery.service";
 
 declare var $: any;
 
@@ -15,11 +16,17 @@ declare var $: any;
   outputs: ['onSubmit'],
   templateUrl: './add-new-listing.component.html',
   styleUrls: ['./add-new-listing.component.css'],
-  providers: [ListingService]
+  providers: [ListingService, ImageGalleryService]
 })
 
 export class AddNewListingComponent {
+  user;
+  fileNames = [];
+  listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Sports' ,'Diverse Collectibles'];
+  imageCounter : number = 2;
+
   constructor(private listingService : ListingService,
+              private imageGalleryService : ImageGalleryService,
               private router : Router,
               private http: Http,
               private af : AngularFire) {
@@ -31,16 +38,10 @@ export class AddNewListingComponent {
           this.router.navigate(['']);
         }
       });
-    this.getImageFileNames().subscribe( files => {
-      this.fileNames=files;
-    });
+      this.imageGalleryService.getImageFileNames().subscribe(fileNames => {
+        this.fileNames=fileNames;
+      });
   }
-
-  user;
-  fileNames = [];
-  listingTypes = ['Books & Ephemera', 'Art', 'Coins & Currency', 'Gems & Minerals', 'Sports' ,'Diverse Collectibles'];
-  imageCounter : number = 2;
-
 
   onNewListingSubmit(productTitle,
                      productSubTitle,
@@ -96,6 +97,9 @@ export class AddNewListingComponent {
       } else {
         newListing.setImage6Path("");
       }
+
+        newListing.setShippingPrice($("#shippingPrice").val());
+        newListing.setNotes($("#notes").val());
 
       this.listingService.addListing(newListing);
       alert("Listing Saved Successfully");

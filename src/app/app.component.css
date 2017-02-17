@@ -20,6 +20,28 @@
   font-family: 'Playfair Display', serif;
 }
 
+footer {
+  background-color: #1b6d85;
+}
+
+.footer-container {
+  border-top: solid 2px #eaeaea;
+  background-color: #1b6d85;
+  color: #eaeaea;
+  padding: 20px;
+  min-height:100%;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.footer-container p {
+  font-size: 150%;
+}
+
+
+
 body, html {
   height: 100%;
 }

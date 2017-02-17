@@ -12,15 +12,27 @@
         <label for="productSubtitle">Product Subtitle</label>
         <input type="text" class="form-control" id="productSubtitle" placeholder="Enter Product Subtitle" #productSubtitle>
       </div>
-      <div class="form-group">
-        <label for="productPrice">Product Price (USD)</label>
-        <input type="text" class="form-control" id="productPrice" placeholder="Enter Product Price" #productPrice>
-      </div>
-      <div class="form-group">
-        <label for="productType">Select Product Type</label>
-        <select class="form-control" id="productType" #productType>
-          <option *ngFor="let type of listingTypes" [value]="type">{{type}}</option>
-        </select>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="productPrice">Product Price (USD)</label>
+            <input type="text" class="form-control" id="productPrice" placeholder="Enter Product Price" #productPrice>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="shippingPrice">Shipping (USD)</label>
+            <input type="text" class="form-control" id="shippingPrice" placeholder="Enter Shipping Price" #shippingPrice>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="productType">Select Product Type</label>
+            <select class="form-control" id="productType" #productType>
+              <option *ngFor="let type of listingTypes" [value]="type">{{type}}</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-sm-6" id="imageFieldsWrapper">
@@ -49,6 +61,10 @@
       <div class="form-group">
         <label for="storageLocation">Storage Location</label>
         <input type="text" class="form-control" id="storageLocation" placeholder="Enter Storage Location" #storageLocation>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea class="form-control" id="notes" rows="8" #notes></textarea>
       </div>
 
       <div class="submitButtonWrapper">

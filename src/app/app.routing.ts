@@ -12,6 +12,7 @@ import {IndexComponent} from "./index-component/index-component.component";
 import {ListingsComponent} from "./listings/listings.component";
 import {AdminLoginComponent} from "./admin-login/admin-login.component";
 import {ImageGalleryComponent} from "./image-gallery/image-gallery.component";
+import {AboutComponent} from "./about/about.component";
 
 
 const appRoutes: Routes = [
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
   { path: 'edit-listing/:id', component: EditListingComponent},
   { path: 'listings', component: ListingsComponent},
   { path: 'admin-login', component: AdminLoginComponent},
-  { path: 'image-gallery', component: ImageGalleryComponent}
+  { path: 'image-gallery', component: ImageGalleryComponent},
+  { path: "about", component: AboutComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
